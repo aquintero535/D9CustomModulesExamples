@@ -1,0 +1,22 @@
+<?php
+
+/**
+ *  Este archivo instala el módulo. En este caso, solo activa el permiso para acceder al módulo para un usuario anónimo.
+ *  "once this module is enabled, look for the generate lorem ipsum permission and enable it"
+ */
+
+/**
+ * @file
+ * Installation functions for Lorem ipsum module.
+ */
+
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+*/
+function loremipsum_install() {
+    user_role_change_permissions(RoleInterface::ANONYMOUS_ID, array(
+        'generate lorem ipsum' => TRUE,
+    ));
+}

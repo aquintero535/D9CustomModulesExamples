@@ -1,0 +1,9 @@
+name: Lorem ipsum
+type: module
+description: 'Lorem ipsum generator for Drupal'
+package: Development
+core: 8.x
+core_version_requirement: ^8 || ^9
+configure: loremipsum.form
+
+## Información básica del módulo, como el nombre, su descripción, la versión requerida, etc.
